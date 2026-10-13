@@ -455,14 +455,19 @@ end
 local framework = fn11()
 framework.Init()
 
--- 2. Ambil data Save secara aman (menunggu hingga data siap)
-local saveData = framework.GetSaveWait()
+repeat
+    saveData = framework.GetSaveWait()
+    if saveData and saveData.SpeedPower ~= nil then
+        speedPower = tonumber(saveData.SpeedPower)
+    else
+        task.wait(3) -- Tunggu 1 detik sebelum mencoba lagi agar tidak lag
+    end
+until saveData and saveData.SpeedPower ~= nil
 
--- 3. Ambil data SpeedPower dari tabel Save
-if saveData then
-    local speedPower = saveData.SpeedPower or 0
-    print("Speed Power saat ini:", speedPower)
-    httpPost({content = "Speed Power saat ini: ".. speedPower})
+if speedPower < 2000000 then
+    local theConfig = readfile("AjjanHub/settings/Config/0.json")
+    writefile("AjjanHub/settings/Config/3.json",theConfig)
 else
-    warn("Gagal mengambil data save player!")
+    local theConfig = readfile("AjjanHub/settings/Config/1.json")
+    writefile("AjjanHub/settings/Config/3.json",theConfig)
 end
