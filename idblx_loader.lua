@@ -501,85 +501,100 @@ local player = Players.LocalPlayer
 local placeId = game.PlaceId
 
 -- Menggunakan RoProxy untuk memproses HTTP request dari client Roblox
-local apiUrl = "https://games.roproxy.com/v1/games/" .. tostring(placeId) .. "/servers/Public?limit=100"
+local apiUrl = "https://games.roblox.com/v2/games/107778070777162/servers/Public?cursor=&sortOrder=Desc&excludeFullGames=true&orderBy=BestLatency"
 
 local function findAndTeleport()
 	local isTeleported = false
 
 	while not isTeleported do
-		print("Mengambil data server...")
-		
-		local success, response = pcall(function()
-			return game:HttpGet(apiUrl)
-		end)
+		pcall(function()
+			print("Mengambil data server...")
 
-		if success and response then
-			local decodeSuccess, responseData = pcall(function()
-				return HttpService:JSONDecode(response)
-			end)
-
-			if decodeSuccess and responseData and responseData.data then
-				local filteredServers = {}
-
-				-- Filter kriteria: ping < 100 dan playing < 4
-				for _, server in ipairs(responseData.data) do
-					local ping = server.ping
-					local playing = server.playing
-
-					if ping and typeof(ping) == "number" and playing and typeof(playing) == "number" then
-						if ping < 100 and playing < 4 then
-							table.insert(filteredServers, server)
-						end
-					end
-				end
-
-				-- Urutkan: Prioritas playing paling sedikit, lalu ping paling kecil
-				table.sort(filteredServers, function(a, b)
-					if a.playing == b.playing then
-						return a.ping < b.ping
-					end
-					return a.playing < b.playing
+			local requestFunc = http_request or request or syn.request
+			if requestFunc then
+				local success, response = pcall(function()
+					return requestFunc({
+						Url = apiUrl,
+						Method = "GET",
+						Headers = {
+							["x-bound-auth-token"] = "v1|47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=|1792064128|Tpc6YFx/BeRWueGbji9MmtKKQ5UTXhXLikTOtYwLCbvpwmL+xdgqgnds7SqrEuNzy+y6a9tb8kZASatvs4qGYA==|mtYRFFE/ORYS1JYyjiGnMT19oLULTQ/R/WZsKQPiuJmtI6P2vxD4NWn8/qND5a6PazjxgHP8OcIC8bcyhPEqHQ==",
+							["Cookie"] = "__utma=200924205.702503118.1699206842.1792059725.1792063654.169; RBXEventTrackerV2=CreateDate=10/15/2026 06:33:14&rbxid=11808188131&browserid=203994001110&rbxuid=11812045806; __utmz=200924205.1770435606.129.17.utmcsr=create.roblox.com|utmccn=(referral)|utmcmd=referral|utmcct=/; _ga=GA1.1.887321143.1736947665; .ROBLOSECURITY=_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_CAEQAhoGCAIQBBgBIhwKBGR1aWQSFDEwOTI0NjAzODcyMjkyMzg0MjE2IhEKBXVuYW1lEghpYmxyaXNldCISCgN1aWQSCzExODEyMDQ1ODA2KAM.TuaUboBHArx7K3FoYPWcvb8dHH_FT_c_dHp-X1Yy59_vfjxfxUjUyGTaLsqeWaGmtX01DPuw-hkZGQ7rxHPKRhuP8oxbCbB5wY5SWmxpp9YPN4TDGj6ERvvhBaEG1z0n35UPqqLhz0NEd0NdbaoHebH7qm1LeLcKyzuOPX084zl4-Uq-XYrIN98uAsAKVsvILBGPWio0lEtf-SNkOUH4mBojhfC22qvGuba_XiBMna8_q44kG3mzQU2CHVa2YWfrgHeyDbEqPeMF5VTU__1espolpb7kva1f4cytpBnLQR3eTsoHNZbJzbM2JgzY6CAxIH2bRMitytSXU31BauXrqobNPH9h6Ja4dGZhNZn4aNG9LwuHJDG-RZISiWC7dJgr9FPX4Oh7oPJGqTBJQQuQq6GYE_gh_Oq5x0KkGetZ0v4hozqVbQ1hOxqSXTmb7_nEkvJRY-YxrqmqPdZ5MzybQWdrO-NoD9OgdJhjr4VR3ahMvcpY_FSk6vf7L4pveuaBTpLN1JZWTyDKdSBhvnx2B5Hny1oddL9_pPhIL4wcnbVkLUuODm9wYJ83InPKm-WGkvQKBkJLSbdAex85BfWWc3oO56O_7TfGvqErjOLfhKiQxJ62JMMW3Gqco_0liO4aHYZjoysPLEl76LBh4cKDuK7Y9Wm00zlI7-2-rcHXSFtmlOnG24I9m3V1RHP1RR2c9c-HgKkKhHxVB_v2LEkVho1288n590rBREikKCExowE9PQY_ORBu69RGChvFfHjorRWRKg_vImyisBK1BrigwsmszSBtR70iMz3kml1D0oWiPaXiowSeJhpaPUAloLh-yyog9WFwLe87gaXhOqwN_Wf28LFaQ3ymT_eYy5148pw.1Y_BXF9uSmHQ6_9gO0ZzV_zw_yk; _ga_BK4ZY0C59K=GS2.1.s1758640060$o9$g0$t1758640060$j60$l0$h0; rbxas=1922b49c7be88827fae0ea6a73548d2058e727cc591f77cde430b4bd7f347002; GuestData=UserID=-211595320; cf_clearance=5Y6Wh264Zg5x98Jtmj6QrfdPgNMxg2Q1KXfQVlQyCBo-1788083614-1.2.1.1-VtD66iWE1KA_f3KDhpifsgJBKulXqV9RpqoUw7OyB_8R86.2g4pDmEwiiuRHepQB8mjBE0oxhpufKw7fsb2x7UxYjvVwiRFfRhdHqlJG3B0xUUrbxMLgW3hUawkRbFYz3sMguHA2S.kDcwbdIHOemOSSftcEI7zbPtorItHYLqrmms5gOu5OqiP1RWbPe3hM85bfXukynOeqK9zffzAXwzvMf3UhXbsW4271VO81y.IwNw_SFr3hrLH7EvCLiPqhNH4ImhqH6yaR2wAD8atOP1nlWKL7bU.MEn0gfOEGzPb3LX_65eEXzMfgA9f25lGBQUYK2uCJZPe03vM6kxL_D4.nqqlIDBi2nS4ECqYcoH4; RBXcb=RBXViralAcquisition%3Dtrue%26RBXSource%3Dtrue%26GoogleAnalytics%3Dtrue; RBXSource=rbx_acquisition_time=09/20/2026 12:12:55&rbx_acquisition_referrer=https://www.roblox.com/home&rbx_medium=Social&rbx_source=www.roblox.com&rbx_campaign=&rbx_adgroup=&rbx_keyword=&rbx_matchtype=&rbx_ad=&rbx_send_info=0; RBXcp=standard; RBXSessionTracker=sessionid=f59c0075-a64e-4454-b23b-ea576892a957; __utmc=200924205; ak_bmsc=33B73BF80AB40F52385E1A55C893D56C~000000000000000000000000000000~YAAQ1AIKcleCIjqhAQAAy1MVPwF16DbX2UPD5mtewDOOszEVcRqaVk5zkeJdPQAkzbvNteo3U2lj7Die6Nd/eZX060tQcsljk7BZK9/I/A2HBv0eudcL4tp5XS3h+IAqTLtkUaoeGcUB7T8FiHXf620IElgvJDj2u01AcZrOZaQH7d9LPY2r66As2+Q/auqPzoxqOR8PVohlL4jZ2xOaVJSCxQRP+mrLcjlQRrCPT0Mvx3LXU2trH3Jxfj+DtoPRRIyNuktc7Cdo/mOwQ2z1A6QlrGLGTLVIGaUYVMRluu1geM01pFRMbv4ZijdTO+r3wa8o7sVcrtF2kbEl1Hw8lLXQdbBGHXvn8AsSwmNK92XPHP0ltLg20LRLtIlADv0NAdYaE76bj84NMhVd; bm_sv=F22C1F3E9ADAFD81EF5FDCC6C9E7862E~YAAQ1AIKclMGIzqhAQAAqYRWPwELHIhSnsUqquA6nN3EhYAhcdEp+B4OCEf/6XXhTh3FvED1yikxMdbhQjZpzei/++uKBWXk4Y5InydUHVnZI6zqrztu/+N/LKBUts55r2C81xn60wRuRnlJMnRxyJ7DADATbe3nY5GwdTzIlWfWhRW8Fb//D67ODzkzrr9cQ6770KspRQgR5iTkQwqPp5Tm0f/26ickvYsrAu0kgfiRaCyzS4pZnSSNmA58l0GJ~1; rbx-ip2=1; RBXPaymentsFlowContext=2beab640-0da6-444e-8d00-acd0be863556,; __utmb=200924205.0.10.1792063654; _pxvid=6b6b5f10-c88b-11f1-864d-f26c378f8a1c; pxcts=ZrPJis-NnH/DWK4WrumFV8QbIN0GrG41-lIYceRsVuY=:UC9TToQqfD1/Cf2I181wZnIEJawRPphJoouanPShD55Q9DoGEv3pzD/P/CQeBBhmXqO0y7f78q26-12YM8XMxBJgJwJ41JNl4RgMbYU7H9FqtEEylnQMalLhjzq3jFZYdZlpAmwvJ9xUsDeCe4GutQ6pvHW18NzQl0aqBdQcfKuIjXQmWeubIY7ZbaOS4NNU; __cf_bm=TFWEOrd4GnNsjvAjNjJNR.u1e4n2nz3S6ch5UYD18oo-1792063993.19822-1.0.1.1-GxQzRrexZ3w5dU_7WK1YbzhyhGJrUip8LW_QHruA.Wm5rs_moOSWKWD.6cG.tVSCcfgjG_z.Or5cYMAKrHLORzOWL_wxMuBlOvVwCL.NdFedyOkr9NdJTu_bVsr67Eur"
+						}
+					})
 				end)
 
-				-- Cek jika ada server yang lolos kriteria
-				if #filteredServers > 0 then
-					print("Ditemukan " .. #filteredServers .. " server yang memenuhi kriteria. Memulai percobaan teleportasi...")
+				if success and response then
+					local decodeSuccess, responseData = pcall(function()
+						return HttpService:JSONDecode(response.Body)
+					end)
 
-					-- Coba teleportasi satu per satu dari server urutan teratas
-					for rank, server in ipairs(filteredServers) do
-						print(string.format("Mencoba teleport ke Server #%d | ID: %s | Playing: %d | Ping: %d", rank, server.id, server.playing, server.ping))
+					if decodeSuccess and responseData and responseData.data then
+						local filteredServers = {}
 
-						local teleportSuccess, err = pcall(function()
-							TeleportService:TeleportToPlaceInstance(placeId, server.id, player)
+						-- Filter kriteria: ping < 100 dan playing < 4
+						for _, server in ipairs(responseData.data) do
+							local ping = server.ping
+							local playing = server.playing
+
+							if ping and typeof(ping) == "number" and playing and typeof(playing) == "number" then
+								if ping < 150 and playing < 6 then
+									table.insert(filteredServers, server)
+								end
+							end
+						end
+
+						-- Urutkan: Prioritas playing paling sedikit, lalu ping paling kecil
+						table.sort(filteredServers, function(a, b)
+							if a.playing == b.playing then
+								return a.ping < b.ping
+							end
+							return a.playing < b.playing
 						end)
 
-						if teleportSuccess then
-							isTeleported = true
-							break -- Keluar dari loop jika teleport berhasil diproses
-						else
-							warn("Gagal teleport ke server #" .. rank .. " (" .. server.id .. "):", err)
-							task.wait(1) -- Jeda singkat sebelum mencoba server berikutnya dalam daftar
-						end
-					end
+						-- Cek jika ada server yang lolos kriteria
+						if #filteredServers > 0 then
+							print("Ditemukan " .. #filteredServers .. " server yang memenuhi kriteria. Memulai percobaan teleportasi...")
 
-					if not isTeleported then
-						warn("Semua server dalam daftar hasil filter gagal diteleportasi.")
+							-- Coba teleportasi satu per satu dari server urutan teratas
+							for rank, server in ipairs(filteredServers) do
+								print(string.format("Mencoba teleport ke Server #%d | ID: %s | Playing: %d | Ping: %d", rank, server.id, server.playing, server.ping))
+
+								local teleportSuccess, err = pcall(function()
+									TeleportService:TeleportToPlaceInstance(placeId, server.id, player)
+								end)
+
+								if teleportSuccess then
+									isTeleported = true
+									break -- Keluar dari loop jika teleport berhasil diproses
+								else
+									warn("Gagal teleport ke server #" .. rank .. " (" .. server.id .. "):", err)
+									task.wait(1) -- Jeda singkat sebelum mencoba server berikutnya dalam daftar
+								end
+							end
+
+							if not isTeleported then
+								warn("Semua server dalam daftar hasil filter gagal diteleportasi.")
+							end
+						else
+							warn("Tidak ada server yang memenuhi kriteria (ping < 100 dan playing < 4).")
+						end
+					else
+						warn("Gagal melakukan parse JSON response.")
 					end
 				else
-					warn("Tidak ada server yang memenuhi kriteria (ping < 100 dan playing < 4).")
+					warn("Gagal mengambil data dari API proxy.")
+				end
+
+				-- Jika belum berhasil teleportasi, tunggu 10 detik lalu ambil data API baru
+				if not isTeleported then
+					print("Menunggu 30 detik sebelum mengambil data API baru...")
+					task.wait(30)
 				end
 			else
-				warn("Gagal melakukan parse JSON response.")
+				warn("Tidak memiliki fungsi http_request!")
+				return
 			end
-		else
-			warn("Gagal mengambil data dari API proxy.")
-		end
-
-		-- Jika belum berhasil teleportasi, tunggu 10 detik lalu ambil data API baru
-		if not isTeleported then
-			print("Menunggu 10 detik sebelum mengambil data API baru...")
-			task.wait(10)
-		end
+		end)
 	end
 end
 
