@@ -484,11 +484,11 @@ repeat
 until saveData and saveData.SpeedPower ~= nil
 
 if speedPower < 2000000 then
-    -- local theConfig = readfile("AjjanHub/settings/Config/0.json")
-    -- writefile("AjjanHub/settings/Config/3.json",theConfig)
+    local theConfig = readfile("0.json")
+    writefile("ChilliLibrary/Games/10563114921/configs/Default.json",theConfig)
 else
-    -- local theConfig = readfile("AjjanHub/settings/Config/1.json")
-    -- writefile("AjjanHub/settings/Config/3.json",theConfig)
+    local theConfig = readfile("1.json")
+    writefile("ChilliLibrary/Games/10563114921/configs/Default.json",theConfig)
 end
 
 
