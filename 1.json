@@ -476,7 +476,7 @@
           "Unit": " st/s"
         },
         "Auto Phantom Express": {
-          "Value": true,
+          "Value": false,
           "Type": "toggle"
         },
         "Auto Trade Souls": {
@@ -626,11 +626,11 @@
       },
       "Ghost Dog & Fishing": {
         "Auto Ghost Dog Quest": {
-          "Value": true,
+          "Value": false,
           "Type": "toggle"
         },
         "Auto Fishing": {
-          "Value": true,
+          "Value": false,
           "Type": "toggle"
         },
         "Cast Luck": {
