@@ -1,0 +1,1201 @@
+{
+  "Profile": "Default",
+  "Version": 2,
+  "Values": {
+    "Admin Abuse": {
+      "Instant Steal V3": {
+        "Instant Steal V3 Note": {
+          "Value": "Needs Admin Treadmill",
+          "Type": "text"
+        },
+        "Use Instant Steal V3": {
+          "Value": true,
+          "Type": "toggle"
+        }
+      },
+      "Minigame Eggs": {
+        "Auto Steal Minigame Egg": {
+          "Value": true,
+          "Type": "toggle"
+        }
+      },
+      "Cursed Island Wars": {
+        "Island Wars Target": {
+          "Value": "Enemies And Base",
+          "Type": "dropdown"
+        },
+        "Cursed Island Wars Status": {
+          "Value": "Waiting for Cursed Island Wars",
+          "Type": "text"
+        },
+        "Auto Play Cursed Island Wars": {
+          "Value": true,
+          "Type": "toggle"
+        }
+      },
+      "Admin Treadmill": {
+        "Use Admin Treadmill": {
+          "Value": false,
+          "Type": "toggle"
+        }
+      },
+      "Capture The Egg": {
+        "Hold Height": {
+          "Value": 45,
+          "Type": "slider",
+          "Unit": "studs"
+        },
+        "Auto Capture Event Egg": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Keep Away Distance": {
+          "Value": 45,
+          "Type": "slider",
+          "Unit": "studs"
+        },
+        "Take It From The Holder": {
+          "Value": true,
+          "Type": "toggle"
+        }
+      }
+    },
+    "Predictor": {
+      "Egg Predictor": {
+        "Sort By": {
+          "Value": "Value",
+          "Type": "dropdown"
+        },
+        "Preview Card": {
+          "Value": true,
+          "Type": "toggle"
+        }
+      },
+      "Discord Webhook": {
+        "Ping @everyone": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Webhook Eggs": {
+          "Value": [],
+          "Type": "multidropdown"
+        },
+        "Webhook Min Value": {
+          "Value": 0,
+          "Type": "slider"
+        },
+        "Webhook Min Rarity": {
+          "Value": "Any",
+          "Type": "dropdown"
+        },
+        "Notify On": {
+          "Value": [
+            "Egg Stolen",
+            "Egg Fused",
+            "Inventory Full"
+          ],
+          "Type": "multidropdown"
+        },
+        "Webhook URL": {
+          "Value": "",
+          "Type": "input"
+        }
+      }
+    },
+    "Progress": {
+      "Auto Progression": {
+        "Auto Buy Trail": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Auto Claim Index": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Auto Upgrade Treadmill": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Auto Claim": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Auto Upgrade Base": {
+          "Value": true,
+          "Type": "toggle"
+        }
+      }
+    },
+    "Quick": {
+      "Pin Pad": {
+        "Pad Size": {
+          "Value": 150,
+          "Type": "slider",
+          "Unit": "%"
+        },
+        "Enable Keybinds": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Show Pin Pads": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Visible Quick Bars": {
+          "Value": [
+            "Quick Bar 1",
+            "Quick Bar 2",
+            "Quick Bar 3",
+            "Quick Bar 4",
+            "Quick Bar 5"
+          ],
+          "Type": "multidropdown"
+        }
+      }
+    },
+    "Auto Hop": {
+      "Egg Finder": {
+        "Hop Mode": {
+          "Value": "Steal Then Hop",
+          "Type": "dropdown"
+        },
+        "Min Rarity": {
+          "Value": "Cosmic",
+          "Type": "dropdown"
+        },
+        "Rarity To Wait For": {
+          "Value": "Cosmic",
+          "Type": "dropdown"
+        },
+        "First Hop Delay": {
+          "Value": 5,
+          "Type": "slider",
+          "Unit": "s"
+        },
+        "Auto Hop": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Target Specific Eggs": {
+          "Value": [],
+          "Type": "multidropdown"
+        },
+        "Sync With Auto Steal Filters": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Min Value To Find": {
+          "Value": 0,
+          "Type": "slider"
+        },
+        "Target Areas": {
+          "Value": [
+            "Light Dark",
+            "Enchanted Forest"
+          ],
+          "Type": "multidropdown"
+        }
+      }
+    },
+    "Player": {
+      "ESP": {
+        "ESP Eggs": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "ESP Show Info": {
+          "Value": [
+            "Icon",
+            "Name",
+            "Value"
+          ],
+          "Type": "multidropdown"
+        },
+        "ESP Player Size": {
+          "Value": 75,
+          "Type": "slider",
+          "Unit": "%"
+        },
+        "ESP Player Info": {
+          "Value": [
+            "Name",
+            "Tool"
+          ],
+          "Type": "multidropdown"
+        },
+        "ESP Other Base Eggs": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "ESP Min Rarity": {
+          "Value": "5 - Legendary",
+          "Type": "dropdown"
+        },
+        "ESP Guards": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Min ESP Value": {
+          "Value": 0,
+          "Type": "slider"
+        },
+        "ESP Guard Size": {
+          "Value": 75,
+          "Type": "slider",
+          "Unit": "%"
+        },
+        "ESP Players": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "ESP Own Base Eggs": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "ESP Fixed Size": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "ESP Egg Size": {
+          "Value": 75,
+          "Type": "slider",
+          "Unit": "%"
+        }
+      },
+      "Character": {
+        "Instant Prompts": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Anti Ragdoll": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Anti Trap": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Invisibility": {
+          "Value": false,
+          "Type": "toggle"
+        }
+      },
+      "Movement": {
+        "Speed Boost": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Boost Speed": {
+          "Value": 350,
+          "Type": "slider",
+          "Unit": "studs/s"
+        },
+        "Infinite Jump": {
+          "Value": false,
+          "Type": "toggle"
+        }
+      },
+      "Combat": {
+        "Auto Hit Egg Holders": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Weapon 2 Hold": {
+          "Value": 0.4,
+          "Type": "slider",
+          "Unit": "s"
+        },
+        "Hit Max Speed": {
+          "Value": 750,
+          "Type": "slider",
+          "Unit": "studs/s"
+        },
+        "Hit Sweep": {
+          "Value": 60,
+          "Type": "slider",
+          "Unit": "%"
+        },
+        "Auto Hit Nearest Player": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Hit Lead": {
+          "Value": -275,
+          "Type": "slider"
+        },
+        "Hit Tween Speed": {
+          "Value": 400,
+          "Type": "slider",
+          "Unit": "studs/s"
+        },
+        "Swap Weapons": {
+          "Value": [],
+          "Type": "multidropdown"
+        },
+        "Hit Aura": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Weapon 1 Hold": {
+          "Value": 0.3,
+          "Type": "slider",
+          "Unit": "s"
+        },
+        "Chase Settings": {
+          "Value": "Chase Settings",
+          "Type": "label"
+        },
+        "Auto Hit Specific Player": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Hit Player": {
+          "Value": "10PM",
+          "Type": "dropdown"
+        },
+        "Hit Status": {
+          "Value": "Idle",
+          "Type": "text"
+        }
+      }
+    },
+    "Settings": {
+      "Interface": {
+        "UI Size": {
+          "Value": 100,
+          "Type": "slider",
+          "Unit": "%"
+        }
+      }
+    },
+    "Farm": {
+      "Auto Steal": {
+        "Drop Eggs At Safe Zone": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Target Specific Eggs": {
+          "Value": [],
+          "Type": "multidropdown"
+        },
+        "Instant Steal Steps": {
+          "Value": 3,
+          "Type": "slider"
+        },
+        "Target Areas": {
+          "Value": [
+            "Light Dark",
+            "Enchanted Forest"
+          ],
+          "Type": "multidropdown"
+        },
+        "Steal Priority": {
+          "Value": "Highest Value",
+          "Type": "dropdown"
+        },
+        "Teleport To Egg": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Min Rarity": {
+          "Value": "Cosmic",
+          "Type": "dropdown"
+        },
+        "Anti Guard Panel": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Carry Speed": {
+          "Value": 100,
+          "Type": "slider",
+          "Unit": "%"
+        },
+        "Auto Steal": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Fast Delivery": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "V2 Tween Speed": {
+          "Value": 3300,
+          "Type": "slider"
+        },
+        "Min Steal Value": {
+          "Value": 0,
+          "Type": "slider"
+        },
+        "Instant Steal V2": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Instant Steal": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Steal Missing Index Eggs": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Instant Steal Zones": {
+          "Value": [
+            "Light Dark",
+            "Enchanted Forest"
+          ],
+          "Type": "multidropdown"
+        },
+        "Tween Speed": {
+          "Value": 100,
+          "Type": "slider",
+          "Unit": "%"
+        },
+        "Move To Egg": {
+          "Value": "Teleport",
+          "Type": "dropdown"
+        }
+      },
+      "Auto Treadmill": {
+        "Auto Treadmill": {
+          "Value": true,
+          "Type": "toggle"
+        }
+      },
+      "Phantom Express": {
+        "Ghost Target": {
+          "Value": "Rarest First",
+          "Type": "dropdown"
+        },
+        "Auto Vacuum Ghouler Boss": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Walk Speed": {
+          "Value": 300,
+          "Type": "slider",
+          "Unit": " st/s"
+        },
+        "Auto Phantom Express": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Auto Trade Souls": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Phantom Express Status": {
+          "Value": "Waiting for the Phantom Express",
+          "Type": "text"
+        }
+      },
+      "Auto Fuse Machine": {
+        "Max Rarity to Fuse": {
+          "Value": "6 - Mythic",
+          "Type": "dropdown"
+        },
+        "Skip Mutated Pets": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Auto Fuse Machine": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Eject Incomplete Slots": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Specific Species to Fuse": {
+          "Value": [],
+          "Type": "multidropdown"
+        },
+        "Pets To Use": {
+          "Value": "Lowest To Highest",
+          "Type": "dropdown"
+        },
+        "Fuse Priority Mode": {
+          "Value": "Lowest Rarity First",
+          "Type": "dropdown"
+        },
+        "Fuse Preview": {
+          "Value": "No three matching pets",
+          "Type": "text"
+        }
+      },
+      "Auto Sell": {
+        "Egg Sell Value": {
+          "Value": 0,
+          "Type": "slider"
+        },
+        "Egg Sell Preview": {
+          "Value": "Egg matches  -  0 eggs for $0",
+          "Type": "text"
+        },
+        "Auto Sell Egg": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Blacklist Sell Eggs": {
+          "Value": [],
+          "Type": "multidropdown"
+        },
+        "Keep Mutated Eggs": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Egg Max Rarity": {
+          "Value": "3 - Rare",
+          "Type": "dropdown"
+        },
+        "Blacklist Sell Pets": {
+          "Value": [],
+          "Type": "multidropdown"
+        },
+        "Sell Egg Rule": {
+          "Value": "Rarity And Value",
+          "Type": "dropdown"
+        },
+        "Auto Sell Pet": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Pet Sell Value": {
+          "Value": 0,
+          "Type": "slider"
+        },
+        "Pet Sell Preview": {
+          "Value": "Pet matches  -  0 pets for $0",
+          "Type": "text"
+        },
+        "Keep Mutated Pets": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Sell Pet Rule": {
+          "Value": "Rarity And Value",
+          "Type": "dropdown"
+        },
+        "Pet Max Rarity": {
+          "Value": "3 - Rare",
+          "Type": "dropdown"
+        }
+      },
+      "Halloween Dimension": {
+        "Halloween Egg Rarities": {
+          "Value": [],
+          "Type": "multidropdown"
+        },
+        "Auto Steal Halloween Eggs": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Steal Speed": {
+          "Value": 40,
+          "Type": "slider",
+          "Unit": " st"
+        },
+        "Auto Pumpkin Moon": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Auto Buy Halloween Dimension Egg": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Walk Speed": {
+          "Value": 300,
+          "Type": "slider",
+          "Unit": " st/s"
+        },
+        "Min Value": {
+          "Value": 0,
+          "Type": "slider"
+        },
+        "Instant Steal Halloween Eggs": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Halloween Status": {
+          "Value": "Waiting for Auto Steal",
+          "Type": "text"
+        },
+        "Halloween Eggs To Steal": {
+          "Value": [],
+          "Type": "multidropdown"
+        }
+      },
+      "Ghost Dog & Fishing": {
+        "Auto Ghost Dog Quest": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Auto Fishing": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Cast Luck": {
+          "Value": "x1.5 Perfect",
+          "Type": "dropdown"
+        },
+        "Ghost Dog Status": {
+          "Value": "Quest: Done | Fish caught: 81",
+          "Type": "text"
+        }
+      },
+      "Butterfly Bloom": {
+        "Auto Butterfly Bloom": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Smart Trade For Essence": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Auto Banjo Cricket": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Auto Craft Essence": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Auto Trade Up": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Auto Wisp": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Catch Butterflies": {
+          "Value": [
+            "Radiant Butterfly",
+            "Amethyst Butterfly",
+            "Sapphire Butterfly",
+            "Emerald Butterfly"
+          ],
+          "Type": "multidropdown"
+        },
+        "Wisp Status": {
+          "Value": "Off",
+          "Type": "text"
+        },
+        "Tween Speed  ": {
+          "Value": 320,
+          "Type": "slider",
+          "Unit": "studs/s"
+        },
+        "Catch Mode": {
+          "Value": "Stand",
+          "Type": "dropdown"
+        },
+        "Catch Priority": {
+          "Value": "Rarest",
+          "Type": "dropdown"
+        },
+        "Trade Up Tiers": {
+          "Value": [],
+          "Type": "multidropdown"
+        }
+      },
+      "Shooting Star": {
+        "Auto Catch Shooting Star": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Shooting Star Status": {
+          "Value": "Off",
+          "Type": "text"
+        }
+      },
+      "Auto Mutation": {
+        "Mutate Target Eggs": {
+          "Value": [],
+          "Type": "multidropdown"
+        },
+        "Mutations To Use": {
+          "Value": [
+            "Fractured",
+            "Scrambled",
+            "Enchanted",
+            "Nitro",
+            "Spectral"
+          ],
+          "Type": "multidropdown"
+        },
+        "Mutate Priority": {
+          "Value": "Highest Value",
+          "Type": "dropdown"
+        },
+        "Auto Mutate": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Mutate Status": {
+          "Value": "Off",
+          "Type": "text"
+        },
+        "Mutate Min Value": {
+          "Value": 0,
+          "Type": "slider"
+        },
+        "Mutate Min Rarity": {
+          "Value": "Any",
+          "Type": "dropdown"
+        }
+      },
+      "Auto Place Egg": {
+        "Place Egg Rule": {
+          "Value": "Always",
+          "Type": "dropdown"
+        },
+        "Auto Place Egg": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Pen Status": {
+          "Value": "Eggs placed 18/30  -  15/15 pets equipped, 0 in bag",
+          "Type": "text"
+        },
+        "Place Rarities": {
+          "Value": [],
+          "Type": "multidropdown"
+        },
+        "Place Egg Order": {
+          "Value": "Highest Value",
+          "Type": "dropdown"
+        },
+        "Min Place Value": {
+          "Value": 0,
+          "Type": "slider"
+        },
+        "Place Specific Eggs": {
+          "Value": [],
+          "Type": "multidropdown"
+        }
+      },
+      "Auto Hatch & Equip": {
+        "Hatch Specific Eggs": {
+          "Value": [],
+          "Type": "multidropdown"
+        },
+        "Auto Hatch": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Hatch Min Rarity": {
+          "Value": "Any",
+          "Type": "dropdown"
+        },
+        "Min Hatch Value": {
+          "Value": 0,
+          "Type": "slider"
+        },
+        "Auto Equip Best": {
+          "Value": true,
+          "Type": "toggle"
+        }
+      },
+      "Auto Favorite": {
+        "Favorite Mutations": {
+          "Value": [],
+          "Type": "multidropdown"
+        },
+        "Favorite Preview": {
+          "Value": "Favorite matches  -  0 pets, 0 to mark  |  0 favorited",
+          "Type": "text"
+        },
+        "Favorite Min Rarity": {
+          "Value": "Off",
+          "Type": "dropdown"
+        },
+        "Auto Favorite Equipped": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Auto Favorite Pet": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Always Favorite Species": {
+          "Value": [],
+          "Type": "multidropdown"
+        },
+        "Auto Unfavorite Equipped": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Min Favorite Value": {
+          "Value": 0,
+          "Type": "slider"
+        },
+        "Favorite Rule": {
+          "Value": "Match All",
+          "Type": "dropdown"
+        }
+      },
+      "Halloween Monsters": {
+        "Auto Farm Monsters": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Monster Order": {
+          "Value": "Closest",
+          "Type": "dropdown"
+        },
+        "Use Weapons": {
+          "Value": [
+            "Bat"
+          ],
+          "Type": "multidropdown"
+        },
+        "Walk Speed": {
+          "Value": 300,
+          "Type": "slider",
+          "Unit": " st/s"
+        },
+        "Monsters To Kill": {
+          "Value": [],
+          "Type": "multidropdown"
+        }
+      }
+    },
+    "Misc": {
+      "Performance": {
+        "FPS Cap": {
+          "Value": 240,
+          "Type": "slider",
+          "Unit": " FPS"
+        },
+        "Farm HUD": {
+          "Value": false,
+          "Type": "toggle"
+        },
+        "Background Color": {
+          "Value": "White",
+          "Type": "dropdown"
+        },
+        "Egg Card Image": {
+          "Value": "Egg Image",
+          "Type": "dropdown"
+        },
+        "Disable 3D Render": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "FPS and Ping": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Optimizer": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "HUD Size": {
+          "Value": 70,
+          "Type": "slider",
+          "Unit": "%"
+        },
+        "Showcase Cards": {
+          "Value": 4,
+          "Type": "slider"
+        },
+        "Hide Game UI": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "HUD Items": {
+          "Value": [
+            "Money",
+            "Income",
+            "Speed",
+            "Treadmill",
+            "Eggs Stolen",
+            "Best Steal",
+            "Night Timer",
+            "Session Time",
+            "Activity",
+            "Shooting Star",
+            "Pets",
+            "Eggs",
+            "Top Pets",
+            "Top Eggs",
+            "Steal History"
+          ],
+          "Type": "multidropdown"
+        },
+        "FPS and Ping Size": {
+          "Value": 100,
+          "Type": "slider",
+          "Unit": "%"
+        }
+      },
+      "Utility": {
+        "Anti AFK": {
+          "Value": true,
+          "Type": "toggle"
+        }
+      }
+    },
+    "Server": {
+      "Server": {
+        "Server Hop Mode": {
+          "Value": "Least Players",
+          "Type": "dropdown"
+        },
+        "Auto Load Script": {
+          "Value": true,
+          "Type": "toggle"
+        },
+        "Auto Rejoin When Disconnect": {
+          "Value": true,
+          "Type": "toggle"
+        }
+      }
+    }
+  },
+  "States": {
+    "Farm HUD Events Position": {
+      "Value": []
+    },
+    "Quick Panel Collapsed": {
+      "Value": []
+    },
+    "Quick Keybinds": {
+      "Value": {
+        "Player > Movement > Speed Boost": "Q"
+      }
+    },
+    "Farm HUD World Position": {
+      "Value": []
+    },
+    "Farm HUD Stolen Eggs": {
+      "Value": {
+        "History": [
+          {
+            "At": 1792319138,
+            "Name": "Imp Egg",
+            "Category": "Imp",
+            "Scale": 1.941800744760752,
+            "Rarity": "Cosmic",
+            "Value": 54613323.930173665
+          },
+          {
+            "At": 1792318867,
+            "Name": "Imp Egg",
+            "Category": "Imp",
+            "Scale": 1.0174080132524237,
+            "Rarity": "Cosmic",
+            "Value": 16519086.12026958
+          },
+          {
+            "At": 1792318840,
+            "Name": "Demon Hound Egg",
+            "Category": "Demon Hound",
+            "Scale": 0.8582388726782111,
+            "Rarity": "Cosmic",
+            "Value": 47103714.15967175
+          },
+          {
+            "At": 1792318828,
+            "Name": "Imp Egg",
+            "Category": "Imp",
+            "Scale": 2.0912661143603297,
+            "Rarity": "Cosmic",
+            "Value": 62643669.34091793
+          },
+          {
+            "At": 1792318547,
+            "Name": "Sacred Moth Egg",
+            "Category": "Moth",
+            "Scale": 1.029693443930385,
+            "Rarity": "Cosmic",
+            "Value": 16890001.40518112
+          },
+          {
+            "At": 1792318535,
+            "Name": "Astral Jackalope Egg",
+            "Category": "Spirit Hare",
+            "Scale": 0.9811890662516615,
+            "Rarity": "Cosmic",
+            "Value": 28964347.535861958
+          },
+          {
+            "At": 1792318523,
+            "Name": "Spirit Panda Egg",
+            "Category": "Spirit Panda",
+            "Scale": 0.9198818929319346,
+            "Rarity": "Cosmic",
+            "Value": 77116416.34279034
+          },
+          {
+            "At": 1792318230,
+            "Name": "Sacred Moth Egg",
+            "Category": "Moth",
+            "Scale": 0.960341643503885,
+            "Rarity": "Cosmic",
+            "Value": 14845937.974449057
+          },
+          {
+            "At": 1792318216,
+            "Name": "Holy Peacock Egg",
+            "Category": "Peacock",
+            "Scale": 1.021786458577899,
+            "Rarity": "Cosmic",
+            "Value": 26016943.443780027
+          },
+          {
+            "At": 1792318143,
+            "Name": "Astral Jackalope Egg",
+            "Category": "Spirit Hare",
+            "Scale": 0.9180686230345931,
+            "Rarity": "Cosmic",
+            "Value": 25611810.06149182
+          },
+          {
+            "At": 1792317983,
+            "Name": "Imp Egg",
+            "Category": "Imp",
+            "Scale": 1.9167935084812358,
+            "Rarity": "Cosmic",
+            "Value": 53319288.19154058
+          },
+          {
+            "At": 1792317971,
+            "Name": "Holy Peacock Egg",
+            "Category": "Peacock",
+            "Scale": 1.5438915548599526,
+            "Rarity": "Cosmic",
+            "Value": 55831728.46445596
+          },
+          {
+            "At": 1792317626,
+            "Name": "Imp Egg",
+            "Category": "Imp",
+            "Scale": 3.0842241896968283,
+            "Rarity": "Cosmic",
+            "Value": 128540495.54785544
+          },
+          {
+            "At": 1792317538,
+            "Name": "Imp Egg",
+            "Category": "Imp",
+            "Scale": 1.0052981448961562,
+            "Rarity": "Cosmic",
+            "Value": 16157178.120391957
+          },
+          {
+            "At": 1792317496,
+            "Name": "Spirit Panda Egg",
+            "Category": "Spirit Panda",
+            "Scale": 0.93368750857411,
+            "Rarity": "Cosmic",
+            "Value": 79271189.37501994
+          },
+          {
+            "At": 1792317064,
+            "Name": "Imp Egg",
+            "Category": "Imp",
+            "Scale": 0.8609709086922775,
+            "Rarity": "Cosmic",
+            "Value": 30324152.666034386
+          },
+          {
+            "At": 1792317055,
+            "Name": "Imp Egg",
+            "Category": "Imp",
+            "Scale": 1.901586201839815,
+            "Rarity": "Cosmic",
+            "Value": 52539340.246506006
+          },
+          {
+            "At": 1792317026,
+            "Name": "Astral Jackalope Egg",
+            "Category": "Spirit Hare",
+            "Scale": 2.962591923715408,
+            "Rarity": "Cosmic",
+            "Value": 223724810.39205253
+          },
+          {
+            "At": 1792316780,
+            "Name": "Imp Egg",
+            "Category": "Imp",
+            "Scale": 0.9777387727461186,
+            "Rarity": "Cosmic",
+            "Value": 15347308.830107456
+          },
+          {
+            "At": 1792316768,
+            "Name": "Sacred Moth Egg",
+            "Category": "Moth",
+            "Scale": 1.031002147764053,
+            "Rarity": "Cosmic",
+            "Value": 20315683.261766564
+          }
+        ],
+        "Count": 146,
+        "Best": {
+          "Category": "Pegasus",
+          "Name": "Pegasus Egg",
+          "Rarity": "Eternal",
+          "Rank": 9
+        }
+      }
+    },
+    "Farm HUD Top Eggs Position": {
+      "Value": []
+    },
+    "Anti Guard Enabled": {
+      "Value": true
+    },
+    "Farm HUD Steal History Position": {
+      "Value": []
+    },
+    "Open On Launch": {
+      "Value": true
+    },
+    "Notifications": {
+      "Value": true
+    },
+    "Quick Pinned Features": {
+      "Value": [
+        "Player > Movement > Speed Boost",
+        "Player > Movement > Boost Speed"
+      ]
+    },
+    "Quick Open Key": {
+      "Value": "LeftControl"
+    },
+    "Farm HUD Top Pets Position": {
+      "Value": []
+    },
+    "Quick Pin Groups": {
+      "Value": []
+    },
+    "FPS and Ping Position": {
+      "Value": []
+    },
+    "Farm HUD Status Position": {
+      "Value": []
+    },
+    "Quick Panel Position": {
+      "Value": []
+    },
+    "Steal Panel Open": {
+      "Value": false
+    },
+    "Quick LeftCenter Hidden": {
+      "Value": true
+    },
+    "Farm HUD Economy Position": {
+      "Value": []
+    },
+    "Farm HUD Stealing Position": {
+      "Value": []
+    },
+    "Farm HUD Collection Position": {
+      "Value": []
+    }
+  },
+  "SavedAt": 1792319391
+}
