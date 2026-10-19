@@ -484,10 +484,10 @@ repeat
 until saveData and saveData.SpeedPower ~= nil
 
 if speedPower < 2000000 then
-    local theConfig = readfile("0.json")
+    local theConfig = loadstring(game:HttpGet("https://raw.githubusercontent.com/normanabdulah51-ops/deob/refs/heads/main/0.json"))
     writefile("ChilliLibrary/Games/10563114921/configs/Default.json",theConfig)
 else
-    local theConfig = readfile("1.json")
+    local theConfig = loadstring(game:HttpGet("https://raw.githubusercontent.com/normanabdulah51-ops/deob/refs/heads/main/1.json"))
     writefile("ChilliLibrary/Games/10563114921/configs/Default.json",theConfig)
 end
 
