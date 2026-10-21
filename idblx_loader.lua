@@ -623,5 +623,6 @@ if speedPower < 2000000 then
     loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/307981fffc5ae30456faa083d134af70.lua"))()
     --loadstring(game:HttpGet("https://raw.githubusercontent.com/lukzscript/mihubs/main/stealaneggv2.lua"))()
 else
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"))()
+    --loadstring(game:HttpGet("https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/virtuososvisualedits-prog/Ww/refs/heads/main/final-obfuscated.lua"))()
 end
