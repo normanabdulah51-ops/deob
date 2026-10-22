@@ -613,8 +613,6 @@ task.spawn(function()
     
 end)
 
--- loadstring(game:HttpGet("https://raw.githubusercontent.com/virtuososvisualedits-prog/Ww/refs/heads/main/final-obfuscated.lua"))()
-
 
 
 
