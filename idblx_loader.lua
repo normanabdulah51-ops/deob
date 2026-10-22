@@ -1,3 +1,9 @@
+if _G.idblx_loader then
+	return
+end
+
+_G.idblx_loader = true
+
 replicatedStorage = game:GetService("ReplicatedStorage")
 local localPlayer = game:GetService("Players").LocalPlayer
 local function fn11()
@@ -455,24 +461,7 @@ end
 local framework = fn11()
 framework.Init()
 
--- -- 2. Ambil data Save secara aman (menunggu hingga data siap)
--- local saveData = framework.GetSaveWait()
-
--- -- 3. Ambil data SpeedPower dari tabel Save
--- if saveData then
---     local speedPower = saveData.SpeedPower or 0
---     -- print("Speed Power saat ini:", speedPower)
---     -- httpPost({content = "Speed Power saat ini: ".. speedPower})
---     if speedPower < 2000000 then
---         local theConfig = readfile("AjjanHub/settings/Config/0.json")
---         writefile("AjjanHub/settings/Config/3.json",theConfig)
---     else
---         local theConfig = readfile("AjjanHub/settings/Config/1.json")
---         writefile("AjjanHub/settings/Config/3.json",theConfig)
---     end
--- else
---     warn("Gagal mengambil data save player!")
--- end
+local speedPower = 10
 
 repeat
     saveData = framework.GetSaveWait()
@@ -484,7 +473,11 @@ repeat
 until saveData and saveData.SpeedPower ~= nil
 
 
-
+if speedPower < 2000000 then
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/307981fffc5ae30456faa083d134af70.lua"))()
+else
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/virtuososvisualedits-prog/Ww/refs/heads/main/final-obfuscated.lua"))()
+end
 
 
 local HttpService = game:GetService("HttpService")
@@ -612,15 +605,3 @@ task.spawn(function()
 
     
 end)
-
-
-
-
-if speedPower < 2000000 then
-    --loadstring(game:HttpGet("https://raw.githubusercontent.com/ClouthubOnTop/Loader/main/main.lua"))()
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/307981fffc5ae30456faa083d134af70.lua"))()
-    --loadstring(game:HttpGet("https://raw.githubusercontent.com/lukzscript/mihubs/main/stealaneggv2.lua"))()
-else
-    --loadstring(game:HttpGet("https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"))()
-	--loadstring(game:HttpGet("https://raw.githubusercontent.com/virtuososvisualedits-prog/Ww/refs/heads/main/final-obfuscated.lua"))()
-end
