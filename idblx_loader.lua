@@ -474,9 +474,12 @@ until saveData and saveData.SpeedPower ~= nil
 
 
 if speedPower < 2000000 then
+    _G.pickLowSpeed = true
     loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/307981fffc5ae30456faa083d134af70.lua"))()
 else
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/virtuososvisualedits-prog/Ww/refs/heads/main/final-obfuscated.lua"))()
+    if not _G.pickLowSpeed then
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/virtuososvisualedits-prog/Ww/refs/heads/main/final-obfuscated.lua"))()
+    end
 end
 
 
